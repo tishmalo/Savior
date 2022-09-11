@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Savior</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="email">ENTER EMAIL</string>
+    <string name="password">ENTER PASSWORD</string>
+    <string name="confirmPassword">CONFIRM PASSWORD</string>
+    <string name="submit">SUBMIT</string>
+    <string name="people">EMAILS</string>
+
+</resources>
