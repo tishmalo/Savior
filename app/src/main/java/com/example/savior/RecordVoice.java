@@ -188,8 +188,9 @@ public  class RecordVoice extends AppCompatActivity implements View.OnClickListe
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                             final String USERNAME=snapshot.child("email").getValue().toString();
+                                            final String LatLong="";
 
-                                            AudioModel am=new AudioModel(USERNAME,AUDIO);
+                                            AudioModel am=new AudioModel(USERNAME,AUDIO,LatLong);
 
                                             ref.push().setValue(am);
 

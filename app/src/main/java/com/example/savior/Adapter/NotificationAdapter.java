@@ -52,6 +52,8 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     public void onBindViewHolder(@NonNull NotificationAdapter.ViewHolder holder, int position) {
         AudioModel am=userList.get(position);
         holder.EMAIL.setText(am.getusername());
+        holder.LOCATION.setText(am.getlatlong());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,10 +116,11 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView EMAIL;
+        TextView EMAIL,LOCATION;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             EMAIL=itemView.findViewById(R.id.reg);
+            LOCATION=itemView.findViewById(R.id.location);
 
         }
     }

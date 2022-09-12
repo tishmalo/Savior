@@ -2,14 +2,23 @@ package com.example.savior.Model;
 
 public class AudioModel {
 
-    private String username,audio;
+    private String username,audio,latlong;
 
     public AudioModel() {
     }
 
-    public AudioModel(String username, String audio) {
+    public AudioModel(String username, String audio, String latlong) {
         this.username = username;
         this.audio = audio;
+        this.latlong = latlong;
+    }
+
+    public String getlatlong() {
+        return latlong;
+    }
+
+    public void setlatlong(String latlong) {
+        this.latlong = latlong;
     }
 
     public String getusername() {

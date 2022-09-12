@@ -197,9 +197,11 @@ public class RecordService extends Service {
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                                         final String USERNAME = snapshot.child("email").getValue().toString();
 
-                                        AudioModel am = new AudioModel(USERNAME, AUDIO);
+                                        final String LatLong="";
 
-                                        ref.push().setValue(am);
+                                        AudioModel am = new AudioModel(USERNAME, AUDIO,LatLong);
+
+                                        ref.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(am);
 
 
                                     }
